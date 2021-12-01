@@ -1,12 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './App.js';
 import reportWebVitals from './reportWebVitals';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { createStore, applyMiddleware } from 'redux';
+import rootReducer from 'redux/reducers';
+import { Provider } from 'react-redux';
+import thunk from "redux-thunk";
+// Stylesheets
+import './UI/vendors/aileron/aileron.css';
+import 'UI/vendors/icomoon/style.css';
+
+const store = createStore(
+  rootReducer, 
+  composeWithDevTools(applyMiddleware(thunk))
+);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

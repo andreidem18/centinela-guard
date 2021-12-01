@@ -1,0 +1,16 @@
+@import 'assets.scss';
+
+.chat-button{
+    @include button-configuration();
+    @include make-circle(50px);
+    @include center();
+    background: $main-green;
+    position: fixed;
+    right: 20px;
+    bottom: 11%;
+    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    i::before{
+        font-size: 22px;
+    }
+}

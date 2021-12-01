@@ -1,0 +1,60 @@
+@import 'assets.scss';
+
+.home-user .statements-home{
+    width: 100%;
+    padding: 0 15px;
+    .card{
+        border-radius: 12px;
+        padding: 15px;
+        & > .header{
+            display: flex;
+            margin-bottom: 12px;
+            h4{
+                font-size: 5.2vw;
+                width: 90%;
+                font-weight: 600;
+            }
+            span{
+                @include center();
+                width: 10%;
+                font-size: 6vw;
+            }
+        }
+        p{ 
+            color: #B5B5B8;
+            font-size: 4vw; 
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        & > .bottom{
+            display: flex;
+            align-items: center;
+            img{
+                border-radius: 50%;
+                width: 12%;
+            }
+            .name{
+                font-size: 4.8vw; 
+                margin-left: 10px;
+            }
+        }
+        .date{
+            text-align: right;
+            color: #969698;
+            font-size: 4vw;
+            margin-top: -10px;
+        }
+    }
+}
+
+@media (min-width: 360px) {
+    .home-user .statements-home .card{
+        & > .header{
+            h4{ font-size: 20px; }
+            span{ font-size: 23px; }
+        }
+        p{ font-size: 15px; }
+        & > .bottom .name { font-size: 18px; }
+        .date{ font-size: 15px; }
+    }
+}

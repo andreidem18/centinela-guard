@@ -1,0 +1,24 @@
+.standar-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    & > .content{ 
+        overflow: auto; 
+        height: 83%;
+        flex-grow: 1;
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        .alternative-background{ 
+            position: absolute;
+            background-position: center 200%;
+        }
+    }
+    .bottom-menu{ height: 9%; }
+    .nav-bar-container{ height: 8%; }
+}

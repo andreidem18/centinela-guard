@@ -1,0 +1,95 @@
+@import "assets.scss";
+
+.invitation-detail{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    h4{
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: .5px;
+        color: $dark;
+        margin-bottom: 10px;
+        span{text-transform: uppercase;}
+    }
+    .created-date{
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.4);
+        display: block;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    .save-guest-button{
+        margin: 0 0 20px auto;
+        display: flex;
+        align-items: center;
+        background-color: #01ad8a;
+        color: $white;
+        border-radius: 50px;
+        border-radius: 50px;
+        padding-left: 10px;
+        .guest-image{
+            @include make-circle(35px);
+        }
+        span{
+            font-size: 14px;
+            margin: 0 4px 0 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    }
+    .calendars{
+        display: flex;
+        text-align: left;
+        .feature-container{ margin: 0 5px; }
+    }
+    .feature-container{
+        margin: 20px 5px;
+        text-align: left;
+        width: 100%;
+        .label{
+            display: inline-block;
+            color: $main-green;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0 10px 5px;
+        }
+        .feature{
+            padding: 8px 12px;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            color: $dark;
+            position: relative;
+            text-align: left;
+            font-size: 16px;
+            min-height: 37px;
+        }
+    }
+    .finish-button{
+        background: $main-green;
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;
+        i{
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    }
+    .expire-button, .finish-button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        border-radius: 3px;
+        background: $main-green;
+        color: $white;
+        width: 100%;
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+        letter-spacing: .5px;
+    }
+    .expire-button{
+        background: #ebebeb;
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

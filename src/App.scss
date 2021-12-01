@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'assets.scss';
+
+
+* {
+    text-align: center;
+    font-family: "Montserrat";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+        -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+
+
+
+.inner{
+    position: absolute;
+    height: 230%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #007bb1, #01ffcd);
+    transition: .5s;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.standar-card-container{
+    position: relative;
+    width: 95%;
+    max-width: 576px;
+    border-radius: 30px;
+    margin: 0 auto 20px;
+    padding: 15px 30px;
+    background: $white;
+    box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.1);
+.card-title-container{
+    h4{
+        color: $dark-blue-variation;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding-bottom: 13px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    }
+    button{
+        @include button-configuration();
+        padding: 6px 5px;
+        background: $light-blue;
+        font-weight: 500;
+        border-radius: 8px;
+        margin-left: 10px;
+    }
+}
+}
+
+.standar-section-title{
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    margin: 60px 0 40px 0;
+    color: $white
+}
+
+
+[class*=btn-]{
+    width: 100%;
+    padding: 15px;
+    text-transform: uppercase;
+    color: #f5f5f5;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 5px;
+}
+
+.btn-primary{
+    background: $main-green;
+}
+.btn-secondary{
+    background: #ebebeb;
+    color: #000;
+}
+.btn-danger{
+    background: $red;
+    color: #fff;
+}
+.btn-success{
+    background: $light-green;
+    color: #fff;
+}
+.btn-info{
+    background: $light-blue;
+    color: rgba(0,0,0,.8);
+}
+
+textarea{
+    resize: none;
+}
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+[class *= col-]{
+    padding: 20px;
+}
+
+@media(min-width: 576px){
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    textarea{ @include custom-scrollbar($light-blue, $light-blue-variation); }
+
+    .col-sm-2{width: 16.66666%;}
+    .col-sm-3{width: 25%;}
+    .col-sm-5{width: 41.66666%;}
+    .col-sm-6{width: 50%;}
+    .col-sm-7{width: 58.33333%;}
+    .col-sm-9{width: 75%;}
+    .col-sm-10{width: 83.33333%;}
+}
+
+@media(min-width: 768px){
+    .col-md-3{width: 25%;}
+    .col-md-4{width: 33.33333%;}
+    .col-md-5{width: 41.66666%;}
+    .col-md-6{width: 50%;}
+    .col-md-7{width: 58.33333%;}
+}
+
+@media(min-width: 992px){
+    .col-lg-3{width: 25%;}
+    .col-lg-4{width: 33.33333%;}
+    .col-lg-5{width: 41.66666%;}
+    .col-lg-7{width: 58.33333%;}
+}
