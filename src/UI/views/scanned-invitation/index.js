@@ -16,6 +16,10 @@ export const ScannedInvitation = () => {
             <div className="invitation-detail">
                     <h4>{invitation.guest.first_name} {invitation.guest.last_name}</h4>
                     <span className='created-date'>Creada el {creationDate} a las {creationHour}</span>
+                    <div className="host-container">
+                        <span className="label">Anfitrión</span>
+                        <div className="host-name">{invitation.user.first_name} {invitation.user.last_name}</div>
+                    </div>
                     {
                         invitation.type === 2 &&
                             <div className="calendars">

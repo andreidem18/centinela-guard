@@ -44,6 +44,25 @@
         text-align: left;
         .feature-container{ margin: 0 5px; }
     }
+    .host-container{
+        margin: 20px 5px;
+        text-align: left;
+        width: 100%;
+        .label{
+            display: inline-block;
+            color: $purple;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 10px 0 10px;
+        }
+        .host-name{
+            color: $dark;
+            position: relative;
+            text-align: left;
+            font-size: 16px;
+            min-height: 37px;
+        }
+    }
     .feature-container{
         margin: 20px 5px;
         text-align: left;
